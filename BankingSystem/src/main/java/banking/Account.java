@@ -17,7 +17,10 @@ public abstract class Account {
 	private double balance;
 
 	protected Account(AccountHolder accountHolder, Long accountNumber, int pin, double startingDeposit) {
-		// complete the constructor
+		this.accountHolder=accountHolder;
+		this.accountNumber=accountNumber;
+		this.pin=pin;
+		this.startingDeposit=startingDeposit;
 	}
 
 	public AccountHolder getAccountHolder() {
@@ -31,7 +34,7 @@ public abstract class Account {
 	}
 
 	public double getBalance() {
-		// complete the function
+		return balance;
         return -1;
 	}
 
