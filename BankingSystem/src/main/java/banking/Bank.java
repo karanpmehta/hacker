@@ -9,13 +9,14 @@ import java.util.LinkedHashMap;
 public class Bank implements BankInterface {
 	private LinkedHashMap<Long, Account> accounts;
 
-	public Bank() {
-		// complete the function
+	public Bank(LinkedHashMap<Long,Account> accounts) {
+		this.accounts=accounts;
+		
 	}
 
 	private Account getAccount(Long accountNumber) {
-		// complete the function
-        return null;
+		Account acc = accounts.get(accountNumber);
+        return acc;
 	}
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
@@ -34,8 +35,9 @@ public class Bank implements BankInterface {
 	}
 
 	public double getBalance(Long accountNumber) {
-		// complete the function
-        return -1;
+		Account acc= accounts.get(accountNumber);
+		double bal = acc.getBalance();
+        return bal;
 	}
 
 	public void credit(Long accountNumber, double amount) {
